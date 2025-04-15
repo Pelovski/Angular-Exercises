@@ -1,0 +1,18 @@
+  <div class="card">
+    <img src="https://lh3.googleusercontent.com/ytP9VP86DItizVX2YNA-xTYzV09IS7rh4WexVp7eilIcfHmm74B7odbcwD5DTXmL0PF42i2wnRKSFPBHlmSjCblWHDCD2oD1oaM1CGFcSd48VBKJfsCi4bS170PKxGwji8CPmehwPw=w200-h247-no" alt="Person" class="card__image">
+    <p class="card__name">{{user.name}}</p>
+
+      <div class="card__name">
+        {{user.email}}
+      </div>
+      <div *ngIf="showDetails">
+        <p>{{user.role}}</p>
+        <p>{{user.phone}}</p>
+        <p>{{user.address}}</p>
+      </div>
+      <button class="btn draw-border" (click)="showMoreInfo()">
+        <span *ngIf="!showDetails">Show more</span>
+        <span *ngIf="showDetails">Hide</span>
+    </button>
+  </div>
+  

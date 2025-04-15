@@ -3,14 +3,14 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ListComponent } from './list/list.component';
-import { ListItemComponent } from './list-item/list-item.component';
+import { UserListComponent } from './user-list/user-list.component';
+import { UserCardComponent } from './user-card/user-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListComponent,
-    ListItemComponent
+    UserListComponent,
+    UserCardComponent,
   ],
   imports: [
     BrowserModule,
