@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IUser } from '../user-card/user-card.component';
 
 @Component({
   selector: 'app-user-list',
@@ -32,5 +33,22 @@ export class UserListComponent {
     },
   ];
 
+  getEmptyUser() {
+    return {
+      name: '',
+      email: '',
+      phone: '',
+      address: '',
+      role: ''
+    };
+  }
 
+  newUser = this.getEmptyUser();
+  successMessage = '';
+
+  createUser(){
+    this.users.push({...this.newUser});
+    this.newUser = this.getEmptyUser();
+    this.successMessage = 'User was created successful';
+  }
 }
